@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --btn: #dbdbdb;
+    --btn-hover: #cacaca;
+    --item-bg: #f0f0f0;
+    --model-bg: rgba(141, 141, 141, 0.541);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 10px;
+}
+
+#app {
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--btn);
+    cursor: pointer;
+}
+
+.header > button:hover {
+    background-color: var(--btn-hover);
+}
+
+.employees {
+    display: flex;
+}
+
+.employees > div {
+    border: 1px solid black;
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.employees_names {
+    background-color: lightblue;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    width: 30%;
+}
+
+.employees_single {
+    background-color: lightblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px;
+    width: 70%;
+}
+
+.employees_names,
+.employees_single {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.employees_names--title,
+.employees_single--title {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.employees_names--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.employees_names--item {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: var(--item-bg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employees_names--item:hover,
+.selected {
+    background-color: var(--btn);
+}
+
+.employees_single--heading {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.employees_single--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.employees_single--info > img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.addEmployee {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--model-bg);
+}
+
+.addEmployee_create {
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 0 50px grey;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addEmployee_create > div {
+    display: grid;
+    grid-template-columns: 48.1% 48.1%;
+    column-gap: 15px;
+}
+
+.addEmployee_create_input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(236, 236,z 236);
+}
+
+.addEmployee_create input::-webkit-outer-spin-button,
+.addEmployee_create_input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.addEmployee_create--submit {
+    padding: 10px !important;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn);
+    cursor: pointer;
+}
+
+.addEmployee_create--submit:hover {
+    background-color: var(--btn-hover);
+}
+
+.delete-btn {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #cc2e3d;
+}
+
+/* Scrollbar for the employees list & details */
+.employees > div::-webkit-scrollbar {
+    width: 10px; /* scrollbar thickness */
+}
+
+.employees > div::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 10px; /* round track */
+}
+
+.employees > div::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px; /* round the scroll thumb */
+}
+
+.employees > div::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
