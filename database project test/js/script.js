@@ -97,6 +97,7 @@
           <img src="${selectedEmployee.imageUrl}" />
           <span class="employee_single--heading">ID: ${selectEmployee.id}<span>
           <span class="employees_single--heading">${selectedEmployee.firstName} ${selectedEmployee.lastName} (${selectedEmployee.age})</span>
+          <span>Position: ${selectEmployee.position}</span>
           <span>Address: ${selectedEmployee.address}</span>
           <span>Email: ${selectedEmployee.email}</span>
           <span>Cell no. : ${selectedEmployee.contactNumber}</span>
