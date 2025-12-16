@@ -215,3 +215,23 @@ body {
 .employees > div::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+.edit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 4px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.edit-btn:hover {
+    background-color: #43a047;
+}
+
+.edit-btn:active {
+    transform: scale(0.95);
+}
+
